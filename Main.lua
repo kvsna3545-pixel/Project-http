@@ -1,4 +1,4 @@
--- Scripts by Team kvsna3545
+-- Gui to lua
 -- Version: 1
 
 -- Instances:
