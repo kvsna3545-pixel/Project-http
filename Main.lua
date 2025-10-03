@@ -1,5 +1,5 @@
 -- Gui to lua
--- Version: 1
+-- Version: 1.9
 
 -- Instances:
 
@@ -539,7 +539,7 @@ ImageLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ImageLabel_4.BorderSizePixel = 0
 ImageLabel_4.Position = UDim2.new(0.838549733, 0, 0.700549424, 0)
 ImageLabel_4.Size = UDim2.new(0, 93, 0, 94)
-ImageLabel_4.Image = "rbxassetid://132864134750958"
+ImageLabel_4.Image = "rbxassetid://103792612098891"
 
 clear.Name = "clear"
 clear.Parent = Frame1
@@ -617,7 +617,7 @@ ImageLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ImageLabel_5.BorderSizePixel = 0
 ImageLabel_5.Size = UDim2.new(0, 28, 0, 29)
-ImageLabel_5.Image = "rbxassetid://85245903405521"
+ImageLabel_5.Image = "rbxassetid://103792612098891"
 
 -- Scripts:
 
