@@ -63,7 +63,7 @@ ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ImageLabel.BorderSizePixel = 0
 ImageLabel.Position = UDim2.new(0.125946969, 0, 0.100476839, 0)
 ImageLabel.Size = UDim2.new(0, 776, 0, 418)
-ImageLabel.Image = "rbxassetid://128880566035665"
+ImageLabel.Image = "rbxassetid://132864134750958"
 
 TextLabel.Parent = ImageLabel
 TextLabel.BackgroundColor3 = Color3.fromRGB(243, 243, 243)
@@ -163,7 +163,7 @@ ImageLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ImageLabel_2.BorderSizePixel = 0
 ImageLabel_2.Position = UDim2.new(0.458333343, 0, 0.700549424, 0)
 ImageLabel_2.Size = UDim2.new(0, 100, 0, 94)
-ImageLabel_2.Image = "rbxassetid://103792612098891"
+ImageLabel_2.Image = "rbxassetid://85245903405521"
 
 TextButton.Parent = Frame1
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
