@@ -1,5 +1,5 @@
--- Gui to lua
--- Version: 1.9
+-- Gui to Lua
+-- Version: 3.2
 
 -- Instances:
 
@@ -63,7 +63,7 @@ ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ImageLabel.BorderSizePixel = 0
 ImageLabel.Position = UDim2.new(0.125946969, 0, 0.100476839, 0)
 ImageLabel.Size = UDim2.new(0, 776, 0, 418)
-ImageLabel.Image = "rbxassetid://132864134750958"
+ImageLabel.Image = "rbxassetid://128880566035665"
 
 TextLabel.Parent = ImageLabel
 TextLabel.BackgroundColor3 = Color3.fromRGB(243, 243, 243)
@@ -72,7 +72,7 @@ TextLabel.BorderSizePixel = 0
 TextLabel.Position = UDim2.new(0.0283505153, 0, 0.0191387553, 0)
 TextLabel.Size = UDim2.new(0, 200, 0, 20)
 TextLabel.Font = Enum.Font.Arcade
-TextLabel.Text = "project http by TEAM kvsna3545"
+TextLabel.Text = "TEAM kvsna3545 EXECUTOR"
 TextLabel.TextColor3 = Color3.fromRGB(135, 135, 135)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
@@ -93,7 +93,7 @@ TextBox.Position = UDim2.new(0, 0, 0.0192307699, 0)
 TextBox.Size = UDim2.new(0, 499, 0, 240)
 TextBox.ClearTextOnFocus = false
 TextBox.Font = Enum.Font.Arcade
-TextBox.Text = print(hello my friend)
+TextBox.Text = "print(\"hello friend\")"
 TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextBox.TextSize = 12.000
 TextBox.TextXAlignment = Enum.TextXAlignment.Left
@@ -163,7 +163,7 @@ ImageLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ImageLabel_2.BorderSizePixel = 0
 ImageLabel_2.Position = UDim2.new(0.458333343, 0, 0.700549424, 0)
 ImageLabel_2.Size = UDim2.new(0, 100, 0, 94)
-ImageLabel_2.Image = "rbxassetid://85245903405521"
+ImageLabel_2.Image = "rbxassetid://132864134750958"
 
 TextButton.Parent = Frame1
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -531,7 +531,7 @@ ImageLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ImageLabel_3.BorderSizePixel = 0
 ImageLabel_3.Position = UDim2.new(1.00238287, 0, 0.700549424, 0)
 ImageLabel_3.Size = UDim2.new(0, 111, 0, 94)
-ImageLabel_3.Image = "rbxassetid://132864134750958"
+ImageLabel_3.Image = "rbxassetid://103792612098891"
 
 ImageLabel_4.Parent = Frame1
 ImageLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -617,7 +617,7 @@ ImageLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ImageLabel_5.BorderSizePixel = 0
 ImageLabel_5.Size = UDim2.new(0, 28, 0, 29)
-ImageLabel_5.Image = "rbxassetid://103792612098891"
+ImageLabel_5.Image = "rbxassetid://132864134750958"
 
 -- Scripts:
 
