@@ -1,989 +1,355 @@
--- Gui to Lua
--- Version: 3.2
+local gui=Instance.new("ScreenGui")
+gui.Name="Private Gui"
+gui.Parent=game:GetService("CoreGui")
 
--- Instances:
+local Ui=Instance.new("Frame")
+Ui.Size=UDim2.new(0,393,0,300)
+Ui.Position=UDim2.new(0,180,0,0)
+Ui.BackgroundColor3=Color3.fromRGB(0,0,0)
+Ui.BorderColor3=Color3.new(0,255,255)
+Ui.BorderSizePixel=3
+Ui.Active=true
+Ui.Draggable=true
+Ui.Parent=gui
 
-local ScreenGui = Instance.new("ScreenGui")
-local ImageLabel = Instance.new("ImageLabel")
-local TextLabel = Instance.new("TextLabel")
-local Frame1 = Instance.new("Frame")
-local TextBox = Instance.new("TextBox")
-local output = Instance.new("TextLabel")
-local unfe = Instance.new("TextButton")
-local attach = Instance.new("TextButton")
-local TextLabel_2 = Instance.new("TextLabel")
-local TextLabel_3 = Instance.new("TextLabel")
-local ImageLabel_2 = Instance.new("ImageLabel")
-local TextButton = Instance.new("TextButton")
-local TextButton_2 = Instance.new("TextButton")
-local ScrollingFrame = Instance.new("ScrollingFrame")
-local Frame = Instance.new("Frame")
-local TextButton_3 = Instance.new("TextButton")
-local TextButton_4 = Instance.new("TextButton")
-local TextButton_5 = Instance.new("TextButton")
-local TextButton_6 = Instance.new("TextButton")
-local TextButton_7 = Instance.new("TextButton")
-local TextButton_8 = Instance.new("TextButton")
-local TextButton_9 = Instance.new("TextButton")
-local TextButton_10 = Instance.new("TextButton")
-local TextButton_11 = Instance.new("TextButton")
-local TextButton_12 = Instance.new("TextButton")
-local TextButton_13 = Instance.new("TextButton")
-local TextButton_14 = Instance.new("TextButton")
-local TextButton_15 = Instance.new("TextButton")
-local TextButton_16 = Instance.new("TextButton")
-local TextButton_17 = Instance.new("TextButton")
-local TextButton_18 = Instance.new("TextButton")
-local TextButton_19 = Instance.new("TextButton")
-local TextButton_20 = Instance.new("TextButton")
-local TextButton_21 = Instance.new("TextButton")
-local TextButton_22 = Instance.new("TextButton")
-local TextButton_23 = Instance.new("TextButton")
-local TextButton_24 = Instance.new("TextButton")
-local TextButton_25 = Instance.new("TextButton")
-local ImageLabel_3 = Instance.new("ImageLabel")
-local ImageLabel_4 = Instance.new("ImageLabel")
-local clear = Instance.new("TextButton")
-local TextLabel_4 = Instance.new("TextLabel")
-local TextButton_26 = Instance.new("TextButton")
-local TextButton_27 = Instance.new("TextButton")
-local TextButton_28 = Instance.new("TextButton")
-local textoz = Instance.new("TextLabel")
-local ImageLabel_5 = Instance.new("ImageLabel")
+local TextLabel=Instance.new("TextLabel")
+TextLabel.Size=UDim2.new(1,0,0,40)
+TextLabel.Position=UDim2.new(0,0,0,0)
+TextLabel.BackgroundColor3=Color3.fromRGB(0,0,0)
+TextLabel.BorderColor3=Color3.new(0,255,255)
+TextLabel.BorderSizePixel=3
+TextLabel.Text="Project http x Team kvsna3545"
+TextLabel.TextColor3=Color3.new(255,255,255)
+TextLabel.TextScaled=true
+TextLabel.Font=Enum.Font.Legacy
+TextLabel.Parent=Ui
 
---Properties:
+local page=1
+local perPage=12
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGui.ResetOnSpawn = false
+local scripts={
+{"Nebula Star Glitcher (by fancykid)", "https://pastebin.com/raw/j09BnGB3"}, {"Lua Hammer", "https://pastefy.app/Nh7FVtvC/raw"}, {"Ak47", "https://raw.githubusercontent.com/sinret/rbxscript.com-scripts-reuploads-/main/ak47"}, {"Private Gui", "https://ghostplayer352.github.io/Authorization/"}, {"My Old Gui", "https://pastebin.com/raw/MMUX0irp"}, {"Mlg Particles", "https://pastebin.com/raw/ZPzjyL1M"}, {"Good Cop Bad Cop", "https://raw.githubusercontent.com/nicolasbarbosa323/good-cop-bad-coop/refs/heads/main/KwuminKa.txt"}, {"Xester", "https://raw.githubusercontent.com/nicolasbarbosa323/xester/refs/heads/main/qC7MUFRJ.txt"}, {"Vereus", "https://raw.githubusercontent.com/nicolasbarbosa323/xester/refs/heads/main/fLrx77PM.txt"}, {"SpiderBot", "https://pastebin.com/raw/XNVWznPH"},
 
-ImageLabel.Parent = ScreenGui
-ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel.BorderSizePixel = 0
-ImageLabel.Position = UDim2.new(0.125946969, 0, 0.100476839, 0)
-ImageLabel.Size = UDim2.new(0, 776, 0, 418)
-ImageLabel.Image = "rbxassetid://128880566035665"
+{"Lalol hub", "https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/main/Backdoor-Scanner/script"},
 
-TextLabel.Parent = ImageLabel
-TextLabel.BackgroundColor3 = Color3.fromRGB(243, 243, 243)
-TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.0283505153, 0, 0.0191387553, 0)
-TextLabel.Size = UDim2.new(0, 200, 0, 20)
-TextLabel.Font = Enum.Font.Arcade
-TextLabel.Text = "TEAM kvsna3545 EXECUTOR"
-TextLabel.TextColor3 = Color3.fromRGB(135, 135, 135)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
+{"backdoor v8.0.0", "https://raw.githubusercontent.com/iK4oS/backdoor.exe/master/source.lua"},
 
-Frame1.Name = "Frame1"
-Frame1.Parent = ImageLabel
-Frame1.BackgroundColor3 = Color3.fromRGB(241, 241, 241)
-Frame1.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame1.BorderSizePixel = 0
-Frame1.Position = UDim2.new(-0.000341671024, 0, 0.127845436, 0)
-Frame1.Size = UDim2.new(0, 647, 0, 364)
+{"Backdoor.Exe V6X", "https://raw.githubusercontent.com/iK4oS/backdoor.exe/v6x/source.lua"},
 
-TextBox.Parent = Frame1
-TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextBox.BorderColor3 = Color3.fromRGB(94, 94, 94)
-TextBox.Position = UDim2.new(0, 0, 0.0192307699, 0)
-TextBox.Size = UDim2.new(0, 499, 0, 240)
-TextBox.ClearTextOnFocus = false
-TextBox.Font = Enum.Font.Arcade
-TextBox.Text = "print(\"hello friend\")"
-TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextBox.TextSize = 12.000
-TextBox.TextXAlignment = Enum.TextXAlignment.Left
-TextBox.TextYAlignment = Enum.TextYAlignment.Top
+{"Stigma Logo", "https://raw.githubusercontent.com/c-1-23/c-1-23/refs/heads/main/K"},
 
-output.Name = "output"
-output.Parent = Frame1
-output.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-output.BorderColor3 = Color3.fromRGB(0, 0, 0)
-output.BorderSizePixel = 0
-output.Position = UDim2.new(0, 0, 0.700549424, 0)
-output.Size = UDim2.new(0, 287, 0, 94)
-output.Font = Enum.Font.Arcade
-output.Text = "--NO ATTACHED,PLIS PRESS ATTACH!"
-output.TextColor3 = Color3.fromRGB(0, 0, 0)
-output.TextSize = 14.000
-output.TextXAlignment = Enum.TextXAlignment.Left
-output.TextYAlignment = Enum.TextYAlignment.Top
+{"Stigma Ultimate Logo", "https://pastebin.com/raw/VbMpnRRy"},
 
-unfe.Name = "unfe"
-unfe.Parent = Frame1
-unfe.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-unfe.BorderColor3 = Color3.fromRGB(94, 94, 94)
-unfe.Position = UDim2.new(0.782407403, 0, 0, 0)
-unfe.Size = UDim2.new(0, 99, 0, 76)
-unfe.Font = Enum.Font.Arcade
-unfe.Text = "EXE"
-unfe.TextColor3 = Color3.fromRGB(0, 0, 0)
-unfe.TextSize = 30.000
+{"SadRc7 Logo", "https://pastebin.com/raw/Gf5qPQbV"},
 
-attach.Name = "attach"
-attach.Parent = Frame1
-attach.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-attach.BorderColor3 = Color3.fromRGB(94, 94, 94)
-attach.Position = UDim2.new(0.782407403, 0, 0.469780207, 0)
-attach.Size = UDim2.new(0, 99, 0, 76)
-attach.Font = Enum.Font.Arcade
-attach.Text = "ATTACH"
-attach.TextColor3 = Color3.fromRGB(0, 0, 0)
-attach.TextSize = 30.000
+{"Lua Logo", "https://pastebin.com/raw/HTBxzUaq"},
 
-TextLabel_2.Parent = Frame1
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(115, 115, 115)
-TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.BorderSizePixel = 0
-TextLabel_2.Position = UDim2.new(0, 0, 0.00824175868, 0)
-TextLabel_2.Size = UDim2.new(0, 499, 0, 4)
-TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = ""
-TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.TextSize = 14.000
+{"T0pk3k", "https://raw.githubusercontent.com/c-1-23/c-1-23/refs/heads/main/T0PK3K%204.0"},
 
-TextLabel_3.Parent = Frame1
-TextLabel_3.BackgroundColor3 = Color3.fromRGB(115, 115, 115)
-TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_3.BorderSizePixel = 0
-TextLabel_3.Position = UDim2.new(0, 0, 0.689560413, 0)
-TextLabel_3.Size = UDim2.new(0, 287, 0, 4)
-TextLabel_3.Font = Enum.Font.SourceSans
-TextLabel_3.Text = ""
-TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_3.TextSize = 14.000
+{"Titan", "https://pastefy.app/jR7Pxpdq/raw"},
 
-ImageLabel_2.Parent = Frame1
-ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel_2.BorderSizePixel = 0
-ImageLabel_2.Position = UDim2.new(0.458333343, 0, 0.700549424, 0)
-ImageLabel_2.Size = UDim2.new(0, 100, 0, 94)
-ImageLabel_2.Image = "rbxassetid://132864134750958"
+{"Robot", "https://pastefy.app/ur8n4dc6/raw"},
 
-TextButton.Parent = Frame1
-TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.BorderColor3 = Color3.fromRGB(94, 94, 94)
-TextButton.Position = UDim2.new(0.628086448, 0, 0.722527444, 0)
-TextButton.Size = UDim2.new(0, 130, 0, 30)
-TextButton.Font = Enum.Font.Arcade
-TextButton.Text = "LOAD SF EXECUTOR LIBRARY"
-TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.TextScaled = true
-TextButton.TextSize = 30.000
-TextButton.TextWrapped = true
+{"Thomas The Dank Engine", "https://rawscripts.net/raw/Client-Replication-Fe-thomas-28335"},
 
-TextButton_2.Parent = Frame1
-TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_2.BorderColor3 = Color3.fromRGB(94, 94, 94)
-TextButton_2.Position = UDim2.new(0.628086448, 0, 0.832417607, 0)
-TextButton_2.Size = UDim2.new(0, 130, 0, 30)
-TextButton_2.Font = Enum.Font.Arcade
-TextButton_2.Text = "LOAD STARLIGHT SS"
-TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_2.TextScaled = true
-TextButton_2.TextSize = 30.000
-TextButton_2.TextWrapped = true
+{"Titan Absolm", "https://raw.githubusercontent.com/TEST19983/Assigment/refs/heads/main/Assignment"},
 
-ScrollingFrame.Parent = Frame1
-ScrollingFrame.Active = true
-ScrollingFrame.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
-ScrollingFrame.BorderColor3 = Color3.fromRGB(165, 165, 165)
-ScrollingFrame.Position = UDim2.new(1.00154555, 0, -0.0659340695, 0)
-ScrollingFrame.Size = UDim2.new(0, 119, 0, 271)
-ScrollingFrame.CanvasSize = UDim2.new(0, 0, 1, 9)
+{"Spooky MC Donalds", "https://rawscripts.net/raw/Universal-Script-Spooky-Scary-MCDonalds-Script-28270"},
 
-Frame.Parent = ScrollingFrame
-Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame.BorderSizePixel = 0
-Frame.Size = UDim2.new(0, 105, 0, 1470)
+{"Mario.Exe", "https://pastebin.com/raw/Ljz3fwU2"},
 
-TextButton_3.Parent = Frame
-TextButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_3.BackgroundTransparency = 1.000
-TextButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_3.BorderSizePixel = 0
-TextButton_3.Position = UDim2.new(0, 0, 0.00204081624, 0)
-TextButton_3.Size = UDim2.new(0, 105, 0, 16)
-TextButton_3.Font = Enum.Font.Arcade
-TextButton_3.Text = "fly SF.txt"
-TextButton_3.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_3.TextScaled = true
-TextButton_3.TextSize = 14.000
-TextButton_3.TextWrapped = true
+{"Shedletsky", "https://pastebin.com/raw/RX3pt98p"},
 
-TextButton_4.Parent = Frame
-TextButton_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_4.BackgroundTransparency = 1.000
-TextButton_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_4.BorderSizePixel = 0
-TextButton_4.Position = UDim2.new(-0.00952380989, 0, 0.0142857144, 0)
-TextButton_4.Size = UDim2.new(0, 105, 0, 16)
-TextButton_4.Font = Enum.Font.Arcade
-TextButton_4.Text = "walkfling.txt"
-TextButton_4.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_4.TextScaled = true
-TextButton_4.TextSize = 14.000
-TextButton_4.TextWrapped = true
+{"Skeleton Skybox", "https://rawscripts.net/raw/Universal-Script-skeleton-sky-10383"},
 
-TextButton_5.Parent = Frame
-TextButton_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_5.BackgroundTransparency = 1.000
-TextButton_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_5.BorderSizePixel = 0
-TextButton_5.Position = UDim2.new(-0.00952380989, 0, 0.0251700673, 0)
-TextButton_5.Size = UDim2.new(0, 105, 0, 16)
-TextButton_5.Font = Enum.Font.Arcade
-TextButton_5.Text = "fling gui.txt"
-TextButton_5.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_5.TextScaled = true
-TextButton_5.TextSize = 14.000
-TextButton_5.TextWrapped = true
+{"Snoop Dogg Skybox", "https://pastefy.app/vIeHZgSK/raw"},
 
-TextButton_6.Parent = Frame
-TextButton_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_6.BackgroundTransparency = 1.000
-TextButton_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_6.BorderSizePixel = 0
-TextButton_6.Position = UDim2.new(-0.00952380989, 0, 0.0360544212, 0)
-TextButton_6.Size = UDim2.new(0, 105, 0, 16)
-TextButton_6.Font = Enum.Font.Arcade
-TextButton_6.Text = "SF cloudy.txt"
-TextButton_6.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_6.TextScaled = true
-TextButton_6.TextSize = 14.000
-TextButton_6.TextWrapped = true
+{"Rc7 Cloud", "https://pastefy.app/veRlpuMC/raw"},
 
-TextButton_7.Parent = Frame
-TextButton_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_7.BackgroundTransparency = 1.000
-TextButton_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_7.BorderSizePixel = 0
-TextButton_7.Position = UDim2.new(-0.00952380989, 0, 0.046938777, 0)
-TextButton_7.Size = UDim2.new(0, 105, 0, 16)
-TextButton_7.Font = Enum.Font.Arcade
-TextButton_7.Text = "console.txt"
-TextButton_7.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_7.TextScaled = true
-TextButton_7.TextSize = 14.000
-TextButton_7.TextWrapped = true
+{"John Doe", "https://rawscripts.net/raw/Universal-Script-John-doe-v2-29135"},
 
-TextButton_8.Parent = Frame
-TextButton_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_8.BackgroundTransparency = 1.000
-TextButton_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_8.BorderSizePixel = 0
-TextButton_8.Position = UDim2.new(-0.00952380989, 0, 0.057823129, 0)
-TextButton_8.Size = UDim2.new(0, 105, 0, 16)
-TextButton_8.Font = Enum.Font.Arcade
-TextButton_8.Text = "admin.txt"
-TextButton_8.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_8.TextScaled = true
-TextButton_8.TextSize = 14.000
-TextButton_8.TextWrapped = true
+{"Steve", "https://pastebin.com/raw/a8WV8PiG"},
 
-TextButton_9.Parent = Frame
-TextButton_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_9.BackgroundTransparency = 1.000
-TextButton_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_9.BorderSizePixel = 0
-TextButton_9.Position = UDim2.new(-0.00952380989, 0, 0.240816325, 0)
-TextButton_9.Size = UDim2.new(0, 105, 0, 16)
-TextButton_9.Font = Enum.Font.Arcade
-TextButton_9.Text = "ARCEUS X.txt"
-TextButton_9.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_9.TextScaled = true
-TextButton_9.TextSize = 14.000
-TextButton_9.TextWrapped = true
+{"Ravenger Claws", "https://pastebin.com/raw/hwnwvdFy"},
 
-TextButton_10.Parent = Frame
-TextButton_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_10.BackgroundTransparency = 1.000
-TextButton_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_10.BorderSizePixel = 0
-TextButton_10.Position = UDim2.new(0, 0, 0.0789115652, 0)
-TextButton_10.Size = UDim2.new(0, 105, 0, 16)
-TextButton_10.Font = Enum.Font.Arcade
-TextButton_10.Text = "theleport tool.txt"
-TextButton_10.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_10.TextScaled = true
-TextButton_10.TextSize = 14.000
-TextButton_10.TextWrapped = true
+{"Mr Bean Admin", "https://raw.githubusercontent.com/Test4267/mrbean/refs/heads/main/hh"},
 
-TextButton_11.Parent = Frame
-TextButton_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_11.BackgroundTransparency = 1.000
-TextButton_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_11.BorderSizePixel = 0
-TextButton_11.Position = UDim2.new(0, 0, 0.0897959173, 0)
-TextButton_11.Size = UDim2.new(0, 105, 0, 16)
-TextButton_11.Font = Enum.Font.Arcade
-TextButton_11.Text = "Brock.txt"
-TextButton_11.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_11.TextScaled = true
-TextButton_11.TextSize = 14.000
-TextButton_11.TextWrapped = true
+{"SSP", "https://pastebin.com/raw/Eu81WV9S"},
 
-TextButton_12.Parent = Frame
-TextButton_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_12.BackgroundTransparency = 1.000
-TextButton_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_12.BorderSizePixel = 0
-TextButton_12.Position = UDim2.new(0, 0, 0.100680269, 0)
-TextButton_12.Size = UDim2.new(0, 105, 0, 16)
-TextButton_12.Font = Enum.Font.Arcade
-TextButton_12.Text = "LUA hammer.txt"
-TextButton_12.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_12.TextScaled = true
-TextButton_12.TextSize = 14.000
-TextButton_12.TextWrapped = true
+{"SSP Dex Explorer", "https://raw.githubusercontent.com/AbuRiffian/None-of-youre-buissness/refs/heads/main/idk"},
 
-TextButton_13.Parent = Frame
-TextButton_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_13.BackgroundTransparency = 1.000
-TextButton_13.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_13.BorderSizePixel = 0
-TextButton_13.Position = UDim2.new(-0.00952380989, 0, 0.111564629, 0)
-TextButton_13.Size = UDim2.new(0, 105, 0, 16)
-TextButton_13.Font = Enum.Font.Arcade
-TextButton_13.Text = "zenatic sword.txt"
-TextButton_13.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_13.TextScaled = true
-TextButton_13.TextSize = 14.000
-TextButton_13.TextWrapped = true
+{"Obunga", "https://pastebin.com/raw/nLJkW0s1"},
 
-TextButton_14.Parent = Frame
-TextButton_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_14.BackgroundTransparency = 1.000
-TextButton_14.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_14.BorderSizePixel = 0
-TextButton_14.Position = UDim2.new(0, 0, 0.122448981, 0)
-TextButton_14.Size = UDim2.new(0, 105, 0, 16)
-TextButton_14.Font = Enum.Font.Arcade
-TextButton_14.Text = "energize.txt"
-TextButton_14.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_14.TextScaled = true
-TextButton_14.TextSize = 14.000
-TextButton_14.TextWrapped = true
+{"Bomb Vest V2", "https://rawscripts.net/raw/Universal-Script-Bomb-Vest-v1-35089"},
 
-TextButton_15.Parent = Frame
-TextButton_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_15.BackgroundTransparency = 1.000
-TextButton_15.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_15.BorderSizePixel = 0
-TextButton_15.Position = UDim2.new(0, 0, 0.13333334, 0)
-TextButton_15.Size = UDim2.new(0, 105, 0, 16)
-TextButton_15.Font = Enum.Font.Arcade
-TextButton_15.Text = "balloons.txt"
-TextButton_15.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_15.TextScaled = true
-TextButton_15.TextSize = 14.000
-TextButton_15.TextWrapped = true
+{"Mobile Keyboard", "https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt"},
 
-TextButton_16.Parent = Frame
-TextButton_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_16.BackgroundTransparency = 1.000
-TextButton_16.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_16.BorderSizePixel = 0
-TextButton_16.Position = UDim2.new(0, 0, 0.144217685, 0)
-TextButton_16.Size = UDim2.new(0, 105, 0, 16)
-TextButton_16.Font = Enum.Font.Arcade
-TextButton_16.Text = "Draw tool.txt"
-TextButton_16.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_16.TextScaled = true
-TextButton_16.TextSize = 14.000
-TextButton_16.TextWrapped = true
+{"Red Sword Pickaxe", "https://raw.githubusercontent.com/ProBypasserHax1/Idkkk/refs/heads/main/Red%20Sword%20Pickaxe.txt"}, 
+    {"Bombvest v2","https://raw.githubusercontent.com/ProBypasserHax1/Ussjzbwusbdlq/refs/heads/main/Luafile33Xc3eww"},
+    {"Bombvest v1","https://raw.githubusercontent.com/LuaGunsX/LuasLegacyScripts/refs/heads/main/%5BRecharacter%5D%20Bomb%20Vest"},
+    {"SSP Dex Explorer Version", "https://raw.githubusercontent.com/AbuRiffian/None-of-youre-buissness/refs/heads/main/idk"},
+    {"SSP","https://pastebin.com/raw/Eu81WV9S"},
+    {"SSP Made by Erased_Luah4x","https://raw.githubusercontent.com/ProBypasserHax1/Idkkk/refs/heads/main/SSP%20BY%20ME.lua"},
+    {"Red Sword PicAxe","https://raw.githubusercontent.com/ProBypasserHax1/Idkkk/refs/heads/main/Red%20Sword%20Pickaxe.txt"},
+    {"Stummy Guns","https://pastebin.com/raw/3XPaYv08"},
+    {"Polaria By 00de0l","https://pastefy.app/agqEB2qs/raw"},
+    {"MLG 2520 Gun","https://rawscripts.net/raw/Client-Replication-the-ss-loadstring-script-27393"},
+    {"LuaMayG*y v4.1","https://raw.githubusercontent.com/sigmaballs4141/asd/refs/heads/main/LuaMayGayV4.1.lua"},
+    {"Elsyian Executor","https://pastebin.com/raw/CsFAQyXr"},
+    {"Anonymous Particlez","particle"},
+    {"Mario.exe","https://pastebin.com/raw/Ljz3fwU2"},
+    {"Proxy Hub","https://pastebin.com/raw/JgnY49aq"},
+    {"Project Shiba","https://pastebin.com/raw/2b6xi6dd"},
+    {"Project Duck Ultimate","https://pastefy.app/RX1PYZs1/raw"},
+    {"FE Hax GUI V2.0.2.1","https://pastebin.com/raw/gr3XZwUY"},
+    {"The Two Brothers {Private Gui}","https://pastebin.com/raw/1sRPZUvM"},
+    {"Super Uper Duper Private Gui by c00lkid","https://pastebin.com/raw/nTCk1iMw"},
+    {"Superx and L00L Private Gui (No Trade!)","https://pastebin.com/raw/DmM6JmsH"},
+    {"L00L X Superx Gui (No Trade and No Script!)","https://pastebin.com/raw/Q02wdXef"},
+    {"Private Gui By Cle0n","https://pastebin.com/raw/dPMidMa3"},
+    {"Private Gui by 005n5n77","https://pastebin.com/raw/MPNijDsd"},
+    {"L00L Super Duper Private GUI V3","https://pastebin.com/raw/1nM6pGVM"},
+    {"L00L Private Gui V1","https://pastebin.com/raw/9iQErXHG"},
+    {"Sznkidd Private Gui","https://pastebin.com/raw/Ub6QVJXn"},
+    {"Private Gui Super Private Gui by Anonymous","https://pastebin.com/raw/BDguUuUx"},
+    {"Project Fire V1.1 By Polemenus","https://pastebin.com/raw/a79VQ4ex"},
+    {"Private Gui 1.35","https://raw.githubusercontent.com/Hanif290/DigsaeyAiijjllnvv/refs/heads/main/Aiisisndndsn"},
+    {"Super Private Gui by Sigmaz","https://raw.githubusercontent.com/Hanif290/SigmaHubV2/refs/heads/main/SigmaHubV2"},
+    {"Private Gui by Hanif","https://raw.githubusercontent.com/Hanif290/SigmaHub/refs/heads/main/SigmaHub"},
+    {"Sigma Gui (Private GUI)","https://pastes.io/raw/private-53"},
+    {"Asder10065 Gui","https://pastebin.com/raw/56j42jkA"},
+    {"Private Gui by 005n5n77 1.5","https://pastebin.com/raw/9XSYjVrm"},
+    {"1x1x1x1x1 Super Private Gui v5.40","https://pastebin.com/raw/ERRk4rvM"},
+  {"1x1x1x1x1 Ultimate Private Gui v7.10", "https://pastefy.app/tsPrm5Ky/raw"},
+    {"Testing Hub By QnDx aka Polpy_Kid","https://pastebin.com/raw/ERRk4rvM"},
+    {"sugma_v1","https://raw.githubusercontent.com/sigmaballs4141/asd/refs/heads/main/Sugma%20V1.txt"},
+    {"Project LuaCore Serverside","https://raw.githubusercontent.com/sigmaballs4141/asd/refs/heads/main/yesking"},
+    {"R15 to R6","https://raw.githubusercontent.com/sigmaballs4141/asd/refs/heads/main/AOIWruw823rpo8n30"},
+    {"Project LuaCore SS","https://raw.githubusercontent.com/sigmaballs4141/asd/refs/heads/main/Project%20LuaCore%20SS"},
+    {"Prison Life Hub By Shedletsky","https://raw.githubusercontent.com/sigmaballs4141/asd/refs/heads/main/Shed%20Prison%20Hax"},
+    {"Anonymous Gui Reborn","https://raw.githubusercontent.com/sigmaballs4141/asd/refs/heads/main/Anonymous%20Reborn%20By%2007n7z"},
+    {"LuaMayGay V2 Made By 07n7z","https://raw.githubusercontent.com/sigmaballs4141/asd/refs/heads/main/LuaMayGayV2.txt"},
+    {"LuaMayGay Made By LuaCore","https://raw.githubusercontent.com/sigmaballs4141/asd/refs/heads/main/LuaMayGay%204"},
+    {"Erased_Luah4x Gui Private","https://pastebin.com/raw/yARPDt3k"},
+    {"Thomas The Dank Engine","https://raw.githubusercontent.com/Sugm4Bullet1/LuaXXccL/refs/heads/main/Thomas"},
+    {"John Doe SS","https://raw.githubusercontent.com/Sugm4Bullet1/LuaXXccL/refs/heads/main/johndoeSS.txt"},
+    {"Nazz Gui","https://raw.githubusercontent.com/Sugm4Bullet1/LuaXXccL/refs/heads/main/nazz%20gui.txt"},
+    {"Polaria By 00de0l [UPDATED]","https://raw.githubusercontent.com/Sugm4Bullet1/LuaXXccL/refs/heads/main/pol%20(2).txt"},
+    {"Syntex Backdoor V1.2.0","https://raw.githubusercontent.com/etgaby33/sb1.2.0/refs/heads/main/sb1.2.0lua.txt"},
+    {"Dominat v5.0.1","https://raw.githubusercontent.com/Sugm4Bullet1/LuaXXccL/refs/heads/main/dominatv5.0.1.txt"},
+    {"c00lgui","https://raw.githubusercontent.com/LuaGunsX/LuasLegacyScripts/refs/heads/main/%5BGUI%5D%20c00lgui"},
+    {"Project Lua","https://rawscripts.net/raw/Universal-Script-Project-Lua-Inspired-by-Project-Ligma-26224"},
+    {"Project Ligma", "https://rawscripts.net/raw/Universal-Script-Project-Ligma-REMADE-31235"},
+    {"Grab Knife v1", "https://raw.githubusercontent.com/retpirato/Roblox-Scripts/refs/heads/master/Grab%20Knife%20V1.lua"},
+    {"Grab Knife v2", "https://raw.githubusercontent.com/retpirato/Roblox-Scripts/refs/heads/master/Grab%20Knife%20V2.lua"},
+    {"Grab Knife v3","https://rawscripts.net/raw/Universal-Script-grab-knife-v3-9232"},
+    {"Grab Knife v4", "https://raw.githubusercontent.com/Icalock/Server/refs/heads/main/Grab%20V4.txt"},
+    {"Project Euphoria [Old]","https://raw.githubusercontent.com/TEST19983/Realrhejrj/refs/heads/main/Refjf"},
+    {"Rc7 Cloud","https://pastebin.com/raw/DK9PK8Xu"},
+    {"Bladed Lightning Dark Titan","https://raw.githubusercontent.com/gitezgitgit/Dark-Titan/refs/heads/main/DARK%20TITAN%20SCRIPT%20SUPER%20RARE.txt"},
+    {"Hatai Gui","https://gist.githubusercontent.com/hataifnx/009dc18d58f8f7044fbc08c353f2f058/raw/9224a43566424ec2edd2f9286855acf004fc4c54/Hatai%2520Gui"},
+    {"Dreambull Gui","https://rawscripts.net/raw/Universal-Script-FE-Bypass-idk-32121"},
+    {"Jeff The Killer Jumpscare","https://rawscripts.net/raw/Universal-Script-Jeff-The-Killer-JumpScare-27384"},
+    {"Shedletsky","https://pastebin.com/raw/QaGn1ekv"},
+    {"Mr Bean Admin","https://raw.githubusercontent.com/Test4267/mrbean/refs/heads/main/hh"},
+    {"Ro-xploit VH","https://gist.githubusercontent.com/hataifnx/0b72277731e6bc6a0f05ef90aa4ba9ab/raw/a5ebe0184ca9acbf8af79f3c0e943f3457b95247/Ro-xploit%2520vh"},
+    {"External GU1! By Anonymous XR","https://pastefy.app/4GLMKcft/raw"},
+    {"SG GUI RED EDITION","https://raw.githubusercontent.com/gitezgitgit/SG-GUI-RED-EDITION/refs/heads/main/FixedVersion"},
+    {"SG GUI BLUE EDITION", "https://raw.githubusercontent.com/gitezgitgit/SG-GUI-COLOR-EDITIONS/refs/heads/main/Blue%20Edition"},
+    {"Robot","https://pastefy.app/ur8n4dc6/raw"},
+    {"Titan","https://raw.githubusercontent.com/TEST19983/Reslasjd/refs/heads/main/attac"},
+    {"Big Smoke","https://raw.githubusercontent.com/LuaGunsX/LuasLegacyScripts/refs/heads/main/%5BRecharacter%5D%20Big%20Smoke"},
+    {"Lua Hammer","https://pastefy.app/Nh7FVtvC/raw"},
+    {"Dual Tentacle Railgun Demon Monster","https://raw.githubusercontent.com/TEST19983/Assigment/refs/heads/main/Assignment"},
+    {"Nebula Star Glitcher","https://pastebin.com/raw/j09BnGB3"},
+    {"John Doe","https://rawscripts.net/raw/Client-Replication-Join-doe-script-uploaded-by-gojohdkaisenkt-me-34101"},
+    {"AK-47","https://raw.githubusercontent.com/sinret/rbxscript.com-scripts-reuploads-/main/ak47"},
+    {"Minecraft Steve","https://raw.githubusercontent.com/Test4267/steve/refs/heads/main/rare"},
+    {"Proximity Hub Max 15 [Proximity6H]","https://raw.githubusercontent.com/HyperionV8/Proximity-Private-Hub/refs/heads/main/obfuscated_script-1745069419608.lua.txt"},
+    {"Private GUI By 00de0l","loadstring(game:HttpGet(\"https://ghostplayer352.github.io/Authorization/\"))()Ioad(\"0d730785a30393bb8bc13e9a8d72a0d3\")"},
+    {"Private GUI By 00de0l [UPDATED]","https://pastefy.app/cVm0LBiJ/raw"},
+    {"3xen0kidd GUI [3xen0guibyl1000l]", "https://pastebin.com/raw/MMUX0irp"},
+    {"MLG Particles", "https://pastebin.com/raw/ZPzjyL1M"},
+    {"Spookyify", "https://pastefy.app/OvBb8y2T/raw"},
+    {"1x1x1x1's FE GUI (Client-Sided)","https://raw.githubusercontent.com/MrWitzbold/1x1x1x1-Gui/refs/heads/main/main.lua"},
+    {"Elysian 2.0 GUI (Client-Sided)","https://raw.githubusercontent.com/MrWitzbold/Elysian-2.0-GUI/refs/heads/main/main.lua"},
+    {"Bill Cipher GUI (Client-Sided)","https://raw.githubusercontent.com/MrWitzbold/Bill-Cipher-GUI/refs/heads/main/Bill%20Cipher%20GUI%20(Client-Sided).lua"},
+    {"RC7 Reawakened (Cilent-Sided)", "https://raw.githubusercontent.com/MrWitzbold/RC7_GUI/refs/heads/main/main.lua"},
+    {"Sirhurt GUI (Cilent-Sided)", "https://raw.githubusercontent.com/MrWitzbold/sirhurt_GUI/refs/heads/main/main.lua"},
+    {"Good Cop Bad Cop", "https://raw.githubusercontent.com/nicolasbarbosa323/good-cop-bad-coop/refs/heads/main/KwuminKa.txt"},
+    {"Gaster Hands", "https://raw.githubusercontent.com/nicolasbarbosa323/good-cop-bad-coop/refs/heads/main/GasterHands.txt"},
+    {"Ban Hammer", "https://raw.githubusercontent.com/nicolasbarbosa323/ban-hammer/refs/heads/main/ban"},
+    {"Xester", "https://raw.githubusercontent.com/nicolasbarbosa323/xester/refs/heads/main/qC7MUFRJ.txt"},
+    {"Grakkeda", "https://raw.githubusercontent.com/nicolasbarbosa323/grakkeda/refs/heads/main/Roblox%20Genkadda%20omega%20leaked.txt"},
+    {"Spectrum Glitcher", "https://raw.githubusercontent.com/nicolasbarbosa323/SCPECTRUMGLITCHER/refs/heads/main/SpectrumG%20(1).txt"},
+    {"Kirito Blades", "https://raw.githubusercontent.com/nicolasbarbosa323/the-angel/refs/heads/main/Kirito%20Blades.txt"},
+    {"The Angel", "https://raw.githubusercontent.com/nicolasbarbosa323/the-angel/refs/heads/main/The%20Angel.txt"},
+    {"Vereus", "https://raw.githubusercontent.com/nicolasbarbosa323/xester/refs/heads/main/fLrx77PM.txt"},
+    {"SpiderBot", "https://pastebin.com/raw/XNVWznPH"},
+    {"Ravanger Claws", "https://raw.githubusercontent.com/nicolasbarbosa323/sin-dragon/refs/heads/main/reevenge%20hands.txt"},
+    {"Kitchen Gun", "https://raw.githubusercontent.com/nicolasbarbosa323/rare/refs/heads/main/kitcher%20gun.lua"},
+    {"Suicide Gun", "https://pastebin.com/raw/TQGaAivj"},
+    {"Touch Me For Boom", "https://raw.githubusercontent.com/gitezgitgit/rare-scripts/refs/heads/main/Touch%20Me%20For%20Boom.txt"},
+    {"Master Hand", "https://raw.githubusercontent.com/gitezgitgit/rare-scripts/refs/heads/main/MasterHand.txt"},
+    {"Green Tank", "https://raw.githubusercontent.com/gitezgitgit/rare-scripts/refs/heads/main/Green%20Tank.txt"},
+    {"Bridge Tool", "https://raw.githubusercontent.com/gitezgitgit/rare-scripts/refs/heads/main/Bridge%20Tool.txt"},
+    {"PipeBomb Launcher", "https://raw.githubusercontent.com/gitezgitgit/rare-scripts/refs/heads/main/PipeBomb%20Launcher.txt"},
+    {"Spawn KillBot", "https://raw.githubusercontent.com/GooberDoesStuff/RandomClientRep/refs/heads/main/Killbot.lua"},
+    {"D!CK_Gun", "https://pastefy.app/Tq7G80Tr/raw"},
+    {"S#s Neko", "https://raw.githubusercontent.com/GooberDoesStuff/RandomClientRep/refs/heads/main/Neko.lua"},
+    {"Yellow Man", "https://pastebin.com/raw/funfBi9a"},
+    {"True Hero ULTIMATE", "https://pastebin.com/raw/m7r4Qeu1"},
+    {"Warhammer", "https://pastebin.com/raw/XcpT3qyM"},
+    {"Neko Knuckles", "https://pastebin.com/raw/gYt5K4k5"},
+    {"Sin Dragon", "https://raw.githubusercontent.com/gitezgitgit/Sin-Dragon/refs/heads/main/Sin%20Dragon.lua.txt"},
+    {"Sin Unleashed", "https://raw.githubusercontent.com/gitezgitgit/Sin-Unleashed/refs/heads/main/Sin%20Unleashed.lua.txt"},
+    {"Project 44033514", "https://raw.githubusercontent.com/gitezgitgit/Project-2044033514/refs/heads/main/Project%2044033514.lua.txt"},
+    {"Goner", "https://raw.githubusercontent.com/nicolasbarbosa323/crytasl/refs/heads/main/goner.lua.txt"},
+    {"Plasma Cutters", "https://rawscripts.net/raw/Prison-Life-Plasma-Cutters-18936"},
+    {"DB Shotgun", "https://pastefy.app/1RhJtgDi/raw"},
+    {"Lightsaber [Q to use]", "https://pastefy.app/bpIeO2df/raw"},
+    {"Noob Bat", "https://pastefy.app/Dnifbxu1/raw"},
+    {"White And Dark Titan", "https://pastebin.com/raw/Tf8zhZ4w"},
+    {"Explosive Robot", "https://pastefy.app/ebiRyCkx/raw"},
+    {"3D Maneuver Gear Script [Based off Attack on Titan]", "https://pastebin.com/raw/Hh1ghmb9"},
+    {"Gay Face", "https://pastebin.com/raw/Maai0Pxu"},
+    {"9/11 Plane [W to move forward]", "https://pastebin.com/raw/5saVhNKb"},
+    {"One Punch Man", "https://pastebin.com/raw/QySEAhP5"},
+    {"Pennywise The Dancing Clown [Q to be Invisible E to Laugh]", "https://pastebin.com/raw/A4f22qvS"},
+    {"Psychopath", "https://pastebin.com/raw/UQU0BB95"},
+    {"Bloody Knight", "https://pastebin.com/raw/QLYF1nbt"},
+    {"Red Trail Scythe", "https://pastebin.com/raw/KPYbrH1C"},
+    {"Dev-Uzi", "https://pastebin.com/raw/PCuUb3jm"},
+    {"Goofy Sans", "https://pastebin.com/raw/PCeZC5MV"},
+    {"Absalom [Armored]", "https://pastebin.com/raw/vQnEfN7K"},
+    {"Bird Wings", "https://pastebin.com/raw/zm3e6eFT"},
+    {"Shadow Ravanger Claws", "https://raw.githubusercontent.com/retpirato/Roblox-Scripts/refs/heads/master/Shadow%20Ravager.lua"},
+    {"Trap Gun", "https://raw.githubusercontent.com/retpirato/Roblox-Scripts/refs/heads/master/Trap%20Gun.lua"},
+    {"The Banisher", "https://raw.githubusercontent.com/retpirato/Roblox-Scripts/refs/heads/master/Banisher.lua"},
+    {"Death Note", "https://raw.githubusercontent.com/retpirato/Roblox-Scripts/refs/heads/master/Death%20Note.lua"},
+    {"Time Blast", "https://pastefy.app/ULKMFpKj/raw"},
+    {"TF2 Spy", "https://pastefy.app/hhIgut1H/raw"},
+    {"Book Of Wisdom", "https://pastefy.app/ozN3eBE6/raw"},
+    {"Freddy Fazbear", "https://raw.githubusercontent.com/gitezgitgit/rare-scripts/refs/heads/main/FreddyFazBear.txt"},
+    {"Dual Pistols", "https://raw.githubusercontent.com/gitezgitgit/rare-scripts/refs/heads/main/Dual%20Pistols.txt"},
+    {"Spawn Giant Cannoneer Nub", "https://raw.githubusercontent.com/gitezgitgit/rare-scripts/refs/heads/main/Cannoneer%20Noob.txt"},
+    {"Dominus Scythe", "https://raw.githubusercontent.com/gitezgitgit/rare-scripts/refs/heads/main/Scythe.txt"},
+    {"Lemonade Drink", "https://pastefy.app/NO77ODmW/raw"},
+    {"Placeholder", "https://pastefy.app/CtVFoMMq/raw"},
+    {"Project Ligma By goodRc7", "https://raw.githubusercontent.com/gitezgitgit/Project-Ligma-Remake/refs/heads/main/ProjectLigmaRemakeObfuscated.txt"},
+    {"STIGMA DUD GUI", "https://pastebin.com/raw/fryTaDhZ"},
+    {"YourMom By SethMilkman Gui", "https://pastebin.com/raw/cfxYDH0N"},
+    {".x.n0 g.i.", "https://pastebin.com/raw/L9Tw2uBw"},
+    {"Proximity Hub [M16]", "https://raw.githubusercontent.com/16visionzXTA/proxipizza/refs/heads/main/proxihvc9928.txt"},
+    {"16visionzX Scripts Tab", "https://raw.githubusercontent.com/16visionzXTA/proxiwaffle/refs/heads/main/obfuscated_script-1746577182464.lua.txt"},
+    {"Rocky2u's Admin", "https://pastebin.com/raw/zzNfYtEh"},
+    {"Project SonicElijahMania", "https://raw.githubusercontent.com/gitezgitgit/Project-SonicElijahMania/refs/heads/main/By%20SonicElijahMania%20On%20YouTube"},
 
-TextButton_17.Parent = Frame
-TextButton_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_17.BackgroundTransparency = 1.000
-TextButton_17.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_17.BorderSizePixel = 0
-TextButton_17.Position = UDim2.new(-0.00952380989, 0, 0.155102044, 0)
-TextButton_17.Size = UDim2.new(0, 105, 0, 16)
-TextButton_17.Font = Enum.Font.Arcade
-TextButton_17.Text = "bridge tool.txt"
-TextButton_17.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_17.TextScaled = true
-TextButton_17.TextSize = 14.000
-TextButton_17.TextWrapped = true
+ {"Unnamed Script", "https://pastebin.com/raw/DmM6JmsH"},
 
-TextButton_18.Parent = Frame
-TextButton_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_18.BackgroundTransparency = 1.000
-TextButton_18.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_18.BorderSizePixel = 0
-TextButton_18.Position = UDim2.new(0, 0, 0.165986389, 0)
-TextButton_18.Size = UDim2.new(0, 105, 0, 16)
-TextButton_18.Font = Enum.Font.Arcade
-TextButton_18.Text = "FLUXUS.txt"
-TextButton_18.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_18.TextScaled = true
-TextButton_18.TextSize = 14.000
-TextButton_18.TextWrapped = true
+    {"Private NexusX", "https://fromhatai.neocities.org/Private/NexusX.lua"},
 
-TextButton_19.Parent = Frame
-TextButton_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_19.BackgroundTransparency = 1.000
-TextButton_19.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_19.BorderSizePixel = 0
-TextButton_19.Position = UDim2.new(-0.00952380989, 0, 0.176870748, 0)
-TextButton_19.Size = UDim2.new(0, 105, 0, 16)
-TextButton_19.Font = Enum.Font.Arcade
-TextButton_19.Text = "LALOL.txt"
-TextButton_19.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_19.TextScaled = true
-TextButton_19.TextSize = 14.000
-TextButton_19.TextWrapped = true
+    {"thebloxerman64_team666 Gui", "https://pastebin.com/raw/ewg5hpqN"},
 
-TextButton_20.Parent = Frame
-TextButton_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_20.BackgroundTransparency = 1.000
-TextButton_20.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_20.BorderSizePixel = 0
-TextButton_20.Position = UDim2.new(-0.00952380989, 0, 0.187755108, 0)
-TextButton_20.Size = UDim2.new(0, 105, 0, 16)
-TextButton_20.Font = Enum.Font.Arcade
-TextButton_20.Text = "AIMBOT.txt"
-TextButton_20.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_20.TextScaled = true
-TextButton_20.TextSize = 14.000
-TextButton_20.TextWrapped = true
+    {"Cle0n Normal Gui", "https://pastefy.app/Rumvf4tQ/raw"}, 
 
-TextButton_21.Parent = Frame
-TextButton_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_21.BackgroundTransparency = 1.000
-TextButton_21.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_21.BorderSizePixel = 0
-TextButton_21.Position = UDim2.new(-0.00952380989, 0, 0.198639452, 0)
-TextButton_21.Size = UDim2.new(0, 105, 0, 16)
-TextButton_21.Font = Enum.Font.Arcade
-TextButton_21.Text = "infinite yield.txt"
-TextButton_21.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_21.TextScaled = true
-TextButton_21.TextSize = 14.000
-TextButton_21.TextWrapped = true
+        {"project baller", "https://pastefy.app/t6W9lM9x/raw"}, 
 
-TextButton_22.Parent = Frame
-TextButton_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_22.BackgroundTransparency = 1.000
-TextButton_22.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_22.BorderSizePixel = 0
-TextButton_22.Position = UDim2.new(-0.00952380989, 0, 0.209523812, 0)
-TextButton_22.Size = UDim2.new(0, 105, 0, 16)
-TextButton_22.Font = Enum.Font.Arcade
-TextButton_22.Text = "photomasher.txt"
-TextButton_22.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_22.TextScaled = true
-TextButton_22.TextSize = 14.000
-TextButton_22.TextWrapped = true
+          {"Grandosla", "https://pastefy.app/Kql9VClT/raw"},
 
-TextButton_23.Parent = Frame
-TextButton_23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_23.BackgroundTransparency = 1.000
-TextButton_23.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_23.BorderSizePixel = 0
-TextButton_23.Position = UDim2.new(-0.00952380989, 0, 0.220408157, 0)
-TextButton_23.Size = UDim2.new(0, 105, 0, 16)
-TextButton_23.Font = Enum.Font.Arcade
-TextButton_23.Text = "mario.exe.txt"
-TextButton_23.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_23.TextScaled = true
-TextButton_23.TextSize = 14.000
-TextButton_23.TextWrapped = true
+        {"G00by Troll Face Sky", "https://pastefy.app/qSX9DXqJ/raw"},
 
-TextButton_24.Parent = Frame
-TextButton_24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_24.BackgroundTransparency = 1.000
-TextButton_24.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_24.BorderSizePixel = 0
-TextButton_24.Position = UDim2.new(-0.00952380989, 0, 0.229931965, 0)
-TextButton_24.Size = UDim2.new(0, 105, 0, 16)
-TextButton_24.Font = Enum.Font.Arcade
-TextButton_24.Text = "g00byd0lan_6664.txt"
-TextButton_24.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_24.TextScaled = true
-TextButton_24.TextSize = 14.000
-TextButton_24.TextWrapped = true
+}
 
-TextButton_25.Parent = Frame
-TextButton_25.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_25.BackgroundTransparency = 1.000
-TextButton_25.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_25.BorderSizePixel = 0
-TextButton_25.Position = UDim2.new(-0.00952380989, 0, 0.0680272132, 0)
-TextButton_25.Size = UDim2.new(0, 105, 0, 16)
-TextButton_25.Font = Enum.Font.Arcade
-TextButton_25.Text = "shotgun.txt"
-TextButton_25.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_25.TextScaled = true
-TextButton_25.TextSize = 14.000
-TextButton_25.TextWrapped = true
+local totalPages=math.ceil(#scripts/perPage)
+local buttons={}
+local backBtn,nextBtn
 
-ImageLabel_3.Parent = Frame1
-ImageLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel_3.BorderSizePixel = 0
-ImageLabel_3.Position = UDim2.new(1.00238287, 0, 0.700549424, 0)
-ImageLabel_3.Size = UDim2.new(0, 111, 0, 94)
-ImageLabel_3.Image = "rbxassetid://103792612098891"
-
-ImageLabel_4.Parent = Frame1
-ImageLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel_4.BorderSizePixel = 0
-ImageLabel_4.Position = UDim2.new(0.838549733, 0, 0.700549424, 0)
-ImageLabel_4.Size = UDim2.new(0, 93, 0, 94)
-ImageLabel_4.Image = "rbxassetid://103792612098891"
-
-clear.Name = "clear"
-clear.Parent = Frame1
-clear.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-clear.BorderColor3 = Color3.fromRGB(94, 94, 94)
-clear.Position = UDim2.new(0.782407403, 0, 0.233516484, 0)
-clear.Size = UDim2.new(0, 99, 0, 76)
-clear.Font = Enum.Font.Arcade
-clear.Text = "CLEAR"
-clear.TextColor3 = Color3.fromRGB(0, 0, 0)
-clear.TextSize = 30.000
-
-TextLabel_4.Parent = ImageLabel
-TextLabel_4.BackgroundColor3 = Color3.fromRGB(242, 242, 242)
-TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_4.BorderSizePixel = 0
-TextLabel_4.Position = UDim2.new(-0.00128865975, 0, 0.0656444803, 0)
-TextLabel_4.Size = UDim2.new(0, 397, 0, 26)
-TextLabel_4.Font = Enum.Font.SourceSans
-TextLabel_4.Text = ""
-TextLabel_4.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_4.TextSize = 14.000
-
-TextButton_26.Parent = ImageLabel
-TextButton_26.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_26.BorderColor3 = Color3.fromRGB(161, 161, 161)
-TextButton_26.Position = UDim2.new(0.0105104344, 0, 0.0705873072, 0)
-TextButton_26.Size = UDim2.new(0, 80, 0, 23)
-TextButton_26.Font = Enum.Font.Arcade
-TextButton_26.Text = "Soon"
-TextButton_26.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_26.TextSize = 14.000
-
-TextButton_27.Parent = ImageLabel
-TextButton_27.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_27.BorderColor3 = Color3.fromRGB(161, 161, 161)
-TextButton_27.Position = UDim2.new(0.125201151, 0, 0.0705873072, 0)
-TextButton_27.Size = UDim2.new(0, 80, 0, 23)
-TextButton_27.Font = Enum.Font.Arcade
-TextButton_27.Text = "SOON(2 DAYS)"
-TextButton_27.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_27.TextScaled = true
-TextButton_27.TextSize = 14.000
-TextButton_27.TextWrapped = true
-
-TextButton_28.Parent = ImageLabel
-TextButton_28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_28.BorderColor3 = Color3.fromRGB(161, 161, 161)
-TextButton_28.Position = UDim2.new(0.241180539, 0, 0.0705873072, 0)
-TextButton_28.Size = UDim2.new(0, 80, 0, 23)
-TextButton_28.Font = Enum.Font.Arcade
-TextButton_28.Text = "SOON"
-TextButton_28.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_28.TextScaled = true
-TextButton_28.TextSize = 14.000
-TextButton_28.TextWrapped = true
-
-textoz.Name = "textoz"
-textoz.Parent = ImageLabel
-textoz.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-textoz.BackgroundTransparency = 1.000
-textoz.BorderColor3 = Color3.fromRGB(0, 0, 0)
-textoz.BorderSizePixel = 0
-textoz.Position = UDim2.new(0.293814421, 0, 0.00239234441, 0)
-textoz.Size = UDim2.new(0, 148, 0, 36)
-textoz.Font = Enum.Font.Arcade
-textoz.Text = "NO ATTACHED"
-textoz.TextColor3 = Color3.fromRGB(255, 0, 0)
-textoz.TextScaled = true
-textoz.TextSize = 14.000
-textoz.TextWrapped = true
-
-ImageLabel_5.Parent = ImageLabel
-ImageLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel_5.BorderSizePixel = 0
-ImageLabel_5.Size = UDim2.new(0, 28, 0, 29)
-ImageLabel_5.Image = "rbxassetid://132864134750958"
-
--- Scripts:
-
-local function MKYN_fake_script() -- unfe.Script 
-	local script = Instance.new('Script', unfe)
-
-	local function executeScript()
-		local script = TextBox.Text
-		if script ~= "" then
-			loadstring(script)()
-		else
-			print("No script entered")
-		end
-	end
-	
-	unfe.MouseButton1Click:Connect(executeScript)
-	
+local function clearButtons()
+    for _,b in ipairs(buttons)do b:Destroy()end
+    buttons={}
 end
-coroutine.wrap(MKYN_fake_script)()
-local function MXOEK_fake_script() -- unfe.Script 
-	local script = Instance.new('Script', unfe)
 
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.output.Text = "script executed!"
-		wait(1)
-		script.Parent.Parent.output.Text = ""
-	end)
+local function loadPage()
+    clearButtons()
+    local startIdx=(page-1)*perPage+1
+    local endIdx=math.min(page*perPage,#scripts)
+    local btnY=50
+    for i=startIdx,endIdx do
+        local name,url=unpack(scripts[i])
+        local idx=i-startIdx
+        local col=math.floor(idx/6)
+        local row=idx%6
+        local btn=Instance.new("TextButton")
+        btn.Size=UDim2.new(0,180,0,28)
+        btn.Position=UDim2.new(0,10+col*190,0,btnY+row*32)
+        btn.BackgroundColor3=Color3.fromRGB(0,0,0)
+        btn.BorderColor3=Color3.new(0,255,255)
+        btn.BorderSizePixel=1
+        btn.Text=name
+        btn.TextColor3=Color3.new(255,255,255)
+        btn.TextScaled=true
+        btn.Font=Enum.Font.Legacy
+        btn.Parent=Ui
+        btn.MouseButton1Click:Connect(function()
+            if url=="particle"then
+                for _,p in ipairs(game.Players:GetPlayers())do
+                    local char=p.Character or p.CharacterAdded:Wait()
+                    local torso=char:FindFirstChild("Torso")or char:FindFirstChild("UpperTorso")
+                    if torso then
+                        local pe=Instance.new("ParticleEmitter")
+                        pe.Texture="http://www.roblox.com/asset/?id=127476787"
+                        pe.VelocitySpread=60
+                        pe.Parent=torso
+                    end
+                end
+            else
+                loadstring(game:HttpGet(url,true))()
+            end
+        end)
+        table.insert(buttons,btn)
+    end
+    local yPosNav=btnY+6*32+10
+    if not backBtn then
+        backBtn=Instance.new("TextButton")
+        backBtn.Size=UDim2.new(0,80,0,28)
+        backBtn.Text="< Back"
+        backBtn.TextColor3=Color3.new(255,255,255)
+        backBtn.BackgroundColor3=Color3.fromRGB(0,0,0)
+        backBtn.BorderColor3=Color3.new(0,255,255)
+        backBtn.BorderSizePixel=1
+        backBtn.Font=Enum.Font.Legacy
+        backBtn.TextScaled=true
+        backBtn.Parent=Ui
+        backBtn.MouseButton1Click:Connect(function()
+            if page>1 then
+                page=page-1
+                loadPage()
+            end
+        end)
+    end
+    backBtn.Position=UDim2.new(0,10,0,yPosNav)
+    backBtn.Visible=page>1
+    if not nextBtn then
+        nextBtn=Instance.new("TextButton")
+        nextBtn.Size=UDim2.new(0,80,0,28)
+        nextBtn.Text="Next >"
+        nextBtn.TextColor3=Color3.new(255,255,255)
+        nextBtn.BackgroundColor3=Color3.fromRGB(0,0,0)
+        nextBtn.BorderColor3=Color3.new(0,255,255)
+        nextBtn.BorderSizePixel=1
+        nextBtn.Font=Enum.Font.Legacy
+        nextBtn.TextScaled=true
+        nextBtn.Parent=Ui
+        nextBtn.MouseButton1Click:Connect(function()
+            if page<totalPages then
+                page=page+1
+                loadPage()
+            end
+        end)
+    end
+    nextBtn.Position=UDim2.new(1,-90,0,yPosNav)
+    nextBtn.Visible=page<totalPages
 end
-coroutine.wrap(MXOEK_fake_script)()
-local function NMMBC_fake_script() -- attach.Script 
-	local script = Instance.new('Script', attach)
 
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent.textoz.TextColor3 = Color3.new(1, 0.666667, 0)
-		wait(2)
-		script.Parent.Parent.Parent.textoz.TextColor3 = Color3.new(0, 1, 0)
-	end)
-	
-end
-coroutine.wrap(NMMBC_fake_script)()
-local function QXUUOYY_fake_script() -- attach.Script 
-	local script = Instance.new('Script', attach)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent.textoz.Text = "Attaching..."
-		wait(2)
-		script.Parent.Parent.Parent.textoz.Text = "Attached"
-		wait(1)
-		script.Parent.Parent.output.Text = ""
-	end)
-	
-end
-coroutine.wrap(QXUUOYY_fake_script)()
-local function KFCEVF_fake_script() -- attach.Script 
-	local script = Instance.new('Script', attach)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.output.Text = "Attaching..."
-		wait(2)
-		script.Parent.Parent.output.Text ="Attached" 
-	end)
-	
-end
-coroutine.wrap(KFCEVF_fake_script)()
-local function WTUS_fake_script() -- TextButton.Script 
-	local script = Instance.new('Script', TextButton)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://pastefy.app/NGLmsMDD/raw"))()
-	end)
-	
-end
-coroutine.wrap(WTUS_fake_script)()
-local function XUXON_fake_script() -- TextButton_2.Script 
-	local script = Instance.new('Script', TextButton_2)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGetAsync("https://starlightrbx.netlify.app/"))()
-	end)
-	
-	
-end
-coroutine.wrap(XUXON_fake_script)()
-local function BKHGFJ_fake_script() -- TextButton_3.Script 
-	local script = Instance.new('Script', TextButton_3)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://pastefy.app/ATvJlWK9/raw", true))()
-	end)
-	    
-end
-coroutine.wrap(BKHGFJ_fake_script)()
-local function SMLZQRM_fake_script() -- TextButton_4.Script 
-	local script = Instance.new('Script', TextButton_4)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://pastefy.app/Vf5POrA6/raw"))()
-	end)
-	    
-end
-coroutine.wrap(SMLZQRM_fake_script)()
-local function QTYJJRI_fake_script() -- TextButton_5.Script 
-	local script = Instance.new('Script', TextButton_5)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://paste.ee/r/NTtmf", true))()
-	end)
-	    
-end
-coroutine.wrap(QTYJJRI_fake_script)()
-local function FQWP_fake_script() -- TextButton_6.Script 
-	local script = Instance.new('Script', TextButton_6)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://pastefy.app/3Fl2F3hZ/raw", true))()
-	end)
-	    
-end
-coroutine.wrap(FQWP_fake_script)()
-local function MRQTWE_fake_script() -- TextButton_7.Script 
-	local script = Instance.new('Script', TextButton_7)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://pastefy.app/RTVCW1y3/raw", true))()
-	end)
-	    
-end
-coroutine.wrap(MRQTWE_fake_script)()
-local function XLBFXB_fake_script() -- TextButton_8.Script 
-	local script = Instance.new('Script', TextButton_8)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://pastefy.app/DAJmmzLe/raw"))()
-	end)
-	    
-end
-coroutine.wrap(XLBFXB_fake_script)()
-local function WVZLKF_fake_script() -- TextButton_9.Script 
-	local script = Instance.new('Script', TextButton_9)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/g00byd0lanxdd/ARCEUS-X-REMAKE/refs/heads/main/ARCEUS%20X%20REMAKE"))()
-	end)
-	
-	
-end
-coroutine.wrap(WVZLKF_fake_script)()
-local function FETZ_fake_script() -- TextButton_10.Script 
-	local script = Instance.new('Script', TextButton_10)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://pastefy.app/lDwgWmqu/raw"))()
-	end)
-	    
-end
-coroutine.wrap(FETZ_fake_script)()
-local function NUCQKSA_fake_script() -- TextButton_11.Script 
-	local script = Instance.new('Script', TextButton_11)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://pastefy.app/Z11C9gHC/raw"))()
-	end)
-	
-	
-end
-coroutine.wrap(NUCQKSA_fake_script)()
-local function XAYSC_fake_script() -- TextButton_12.Script 
-	local script = Instance.new('Script', TextButton_12)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://pastefy.app/cP51sqtA/raw"))()
-	end)
-	
-	
-end
-coroutine.wrap(XAYSC_fake_script)()
-local function QAVIDK_fake_script() -- TextButton_13.Script 
-	local script = Instance.new('Script', TextButton_13)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://pastefy.app/p2ZLgyn6/raw"))()
-	end)
-	
-	
-end
-coroutine.wrap(QAVIDK_fake_script)()
-local function MNCT_fake_script() -- TextButton_14.Script 
-	local script = Instance.new('Script', TextButton_14)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/IlikeyocutgHAH12/FEEGGEG/refs/heads/main/%5BFE%5D%20Energize%20Animation%20Gui.txt"))()
-	end)
-	
-	
-end
-coroutine.wrap(MNCT_fake_script)()
-local function GURZLQ_fake_script() -- TextButton_15.Script 
-	local script = Instance.new('Script', TextButton_15)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://pastefy.app/F3bzwaMX/raw"))()
-	end)
-	
-	
-end
-coroutine.wrap(GURZLQ_fake_script)()
-local function JZJSWXX_fake_script() -- TextButton_16.Script 
-	local script = Instance.new('Script', TextButton_16)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://pastefy.app/RluHyJBW/raw"))()
-	end)
-	
-	
-end
-coroutine.wrap(JZJSWXX_fake_script)()
-local function JDKFMQ_fake_script() -- TextButton_17.Script 
-	local script = Instance.new('Script', TextButton_17)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://pastefy.app/xocNeWue/raw"))()
-	end)
-	
-	
-end
-coroutine.wrap(JDKFMQ_fake_script)()
-local function EJAPXR_fake_script() -- TextButton_18.Script 
-	local script = Instance.new('Script', TextButton_18)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://pastefy.app/egXQ8zhz/raw", true))()
-	end)
-	
-	
-end
-coroutine.wrap(EJAPXR_fake_script)()
-local function CRGJ_fake_script() -- TextButton_19.Script 
-	local script = Instance.new('Script', TextButton_19)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/main/Backdoor-Scanner/script'))()
-	end)
-	
-	
-end
-coroutine.wrap(CRGJ_fake_script)()
-local function EWGBX_fake_script() -- TextButton_20.Script 
-	local script = Instance.new('Script', TextButton_20)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/agreed69-scripts/open-src-scripts/refs/heads/main/Universal%20Aimbot.lua",true))()
-	end)
-	
-	
-end
-coroutine.wrap(EWGBX_fake_script)()
-local function EMKGV_fake_script() -- TextButton_21.Script 
-	local script = Instance.new('Script', TextButton_21)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-	end)
-	
-	
-end
-coroutine.wrap(EMKGV_fake_script)()
-local function PBEQEG_fake_script() -- TextButton_22.Script 
-	local script = Instance.new('Script', TextButton_22)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet('https://pastebin.com/raw/AkU2spGc'))()
-	end)
-	
-	
-end
-coroutine.wrap(PBEQEG_fake_script)()
-local function SAWHVO_fake_script() -- TextButton_23.Script 
-	local script = Instance.new('Script', TextButton_23)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Mario-EXE-lua-executor-17576"))()
-	end)
-	
-	
-end
-coroutine.wrap(SAWHVO_fake_script)()
-local function OWRG_fake_script() -- TextButton_24.Script 
-	local script = Instance.new('Script', TextButton_24)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://pastefy.app/Lc9amolD/raw", true))()
-	end)
-	
-	
-end
-coroutine.wrap(OWRG_fake_script)()
-local function TNVKLFM_fake_script() -- TextButton_25.Script 
-	local script = Instance.new('Script', TextButton_25)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://pastebin.com/raw/p2hT1rFH"))()
-	end)
-	
-	
-end
-coroutine.wrap(TNVKLFM_fake_script)()
-local function FMVLAQ_fake_script() -- clear.Script 
-	local script = Instance.new('Script', clear)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.TextBox.Text = ""
-	end)
-end
-coroutine.wrap(FMVLAQ_fake_script)()
-local function QCNJJKQ_fake_script() -- clear.Script 
-	local script = Instance.new('Script', clear)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.output.Text = "cleared!"
-		wait(1)
-		script.Parent.Parent.output.Text = ""
-	end)
-end
-coroutine.wrap(QCNJJKQ_fake_script)()
-local function XMCVQ_fake_script() -- ImageLabel.LocalScript 
-	local script = Instance.new('LocalScript', ImageLabel)
-
-	local UserInputService = game:GetService("UserInputService")
-	
-	local gui = script.Parent
-	
-	local dragging
-	local dragInput
-	local dragStart
-	local startPos
-	
-	local function update(input)
-		local delta = input.Position - dragStart
-		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-	end
-	
-	gui.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-			dragging = true
-			dragStart = input.Position
-			startPos = gui.Position
-	
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragging = false
-				end
-			end)
-		end
-	end)
-	
-	gui.InputChanged:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-			dragInput = input
-		end
-	end)
-	
-	UserInputService.InputChanged:Connect(function(input)
-		if input == dragInput and dragging then
-			update(input)
-		end
-	end)
-	
-end
-coroutine.wrap(XMCVQ_fake_script)()
+loadPage()
