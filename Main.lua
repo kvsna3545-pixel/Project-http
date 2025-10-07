@@ -28,62 +28,42 @@ local page=1
 local perPage=12
 
 local scripts={
-{"Nebula Star Glitcher (by fancykid)", "https://pastebin.com/raw/j09BnGB3"}, {"Lua Hammer", "https://pastefy.app/Nh7FVtvC/raw"}, {"Ak47", "https://raw.githubusercontent.com/sinret/rbxscript.com-scripts-reuploads-/main/ak47"}, {"Private Gui", "https://ghostplayer352.github.io/Authorization/"}, {"My Old Gui", "https://pastebin.com/raw/MMUX0irp"}, {"Mlg Particles", "https://pastebin.com/raw/ZPzjyL1M"}, {"Good Cop Bad Cop", "https://raw.githubusercontent.com/nicolasbarbosa323/good-cop-bad-coop/refs/heads/main/KwuminKa.txt"}, {"Xester", "https://raw.githubusercontent.com/nicolasbarbosa323/xester/refs/heads/main/qC7MUFRJ.txt"}, {"Vereus", "https://raw.githubusercontent.com/nicolasbarbosa323/xester/refs/heads/main/fLrx77PM.txt"}, {"SpiderBot", "https://pastebin.com/raw/XNVWznPH"},
-
+{"Nebula Star Glitcher (by fancykid)", "https://pastebin.com/raw/j09BnGB3"},
+{"Lua Hammer", "https://pastefy.app/Nh7FVtvC/raw"}, 
+{"Ak47", "https://raw.githubusercontent.com/sinret/rbxscript.com-scripts-reuploads-/main/ak47"}, 
+{"Private Gui", "https://ghostplayer352.github.io/Authorization/"}, 
+{"My Old Gui", "https://pastebin.com/raw/MMUX0irp"}, {"Mlg Particles", "https://pastebin.com/raw/ZPzjyL1M"}, 
+{"Good Cop Bad Cop", "https://raw.githubusercontent.com/nicolasbarbosa323/good-cop-bad-coop/refs/heads/main/KwuminKa.txt"},
+{"Xester", "https://raw.githubusercontent.com/nicolasbarbosa323/xester/refs/heads/main/qC7MUFRJ.txt"},
+{"Vereus", "https://raw.githubusercontent.com/nicolasbarbosa323/xester/refs/heads/main/fLrx77PM.txt"},
+{"SpiderBot", "https://pastebin.com/raw/XNVWznPH"},
 {"Lalol hub", "https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/main/Backdoor-Scanner/script"},
-
 {"backdoor v8.0.0", "https://raw.githubusercontent.com/iK4oS/backdoor.exe/master/source.lua"},
-
 {"Backdoor.Exe V6X", "https://raw.githubusercontent.com/iK4oS/backdoor.exe/v6x/source.lua"},
-
 {"Stigma Logo", "https://raw.githubusercontent.com/c-1-23/c-1-23/refs/heads/main/K"},
-
 {"Stigma Ultimate Logo", "https://pastebin.com/raw/VbMpnRRy"},
-
 {"SadRc7 Logo", "https://pastebin.com/raw/Gf5qPQbV"},
-
 {"Lua Logo", "https://pastebin.com/raw/HTBxzUaq"},
-
 {"T0pk3k", "https://raw.githubusercontent.com/c-1-23/c-1-23/refs/heads/main/T0PK3K%204.0"},
-
 {"Titan", "https://pastefy.app/jR7Pxpdq/raw"},
-
 {"Robot", "https://pastefy.app/ur8n4dc6/raw"},
-
 {"Thomas The Dank Engine", "https://rawscripts.net/raw/Client-Replication-Fe-thomas-28335"},
-
 {"Titan Absolm", "https://raw.githubusercontent.com/TEST19983/Assigment/refs/heads/main/Assignment"},
-
 {"Spooky MC Donalds", "https://rawscripts.net/raw/Universal-Script-Spooky-Scary-MCDonalds-Script-28270"},
-
 {"Mario.Exe", "https://pastebin.com/raw/Ljz3fwU2"},
-
 {"Shedletsky", "https://pastebin.com/raw/RX3pt98p"},
-
 {"Skeleton Skybox", "https://rawscripts.net/raw/Universal-Script-skeleton-sky-10383"},
-
 {"Snoop Dogg Skybox", "https://pastefy.app/vIeHZgSK/raw"},
-
 {"Rc7 Cloud", "https://pastefy.app/veRlpuMC/raw"},
-
 {"John Doe", "https://rawscripts.net/raw/Universal-Script-John-doe-v2-29135"},
-
 {"Steve", "https://pastebin.com/raw/a8WV8PiG"},
-
 {"Ravenger Claws", "https://pastebin.com/raw/hwnwvdFy"},
-
 {"Mr Bean Admin", "https://raw.githubusercontent.com/Test4267/mrbean/refs/heads/main/hh"},
-
 {"SSP", "https://pastebin.com/raw/Eu81WV9S"},
-
 {"SSP Dex Explorer", "https://raw.githubusercontent.com/AbuRiffian/None-of-youre-buissness/refs/heads/main/idk"},
-
 {"Obunga", "https://pastebin.com/raw/nLJkW0s1"},
-
 {"Bomb Vest V2", "https://rawscripts.net/raw/Universal-Script-Bomb-Vest-v1-35089"},
-
 {"Mobile Keyboard", "https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt"},
-
 {"Red Sword Pickaxe", "https://raw.githubusercontent.com/ProBypasserHax1/Idkkk/refs/heads/main/Red%20Sword%20Pickaxe.txt"}, 
     {"Bombvest v2","https://raw.githubusercontent.com/ProBypasserHax1/Ussjzbwusbdlq/refs/heads/main/Luafile33Xc3eww"},
     {"Bombvest v1","https://raw.githubusercontent.com/LuaGunsX/LuasLegacyScripts/refs/heads/main/%5BRecharacter%5D%20Bomb%20Vest"},
@@ -244,20 +224,13 @@ local scripts={
     {"16visionzX Scripts Tab", "https://raw.githubusercontent.com/16visionzXTA/proxiwaffle/refs/heads/main/obfuscated_script-1746577182464.lua.txt"},
     {"Rocky2u's Admin", "https://pastebin.com/raw/zzNfYtEh"},
     {"Project SonicElijahMania", "https://raw.githubusercontent.com/gitezgitgit/Project-SonicElijahMania/refs/heads/main/By%20SonicElijahMania%20On%20YouTube"},
-
- {"Unnamed Script", "https://pastebin.com/raw/DmM6JmsH"},
-
+    {"Unnamed Script", "https://pastebin.com/raw/DmM6JmsH"},
     {"Private NexusX", "https://fromhatai.neocities.org/Private/NexusX.lua"},
-
     {"thebloxerman64_team666 Gui", "https://pastebin.com/raw/ewg5hpqN"},
-
     {"Cle0n Normal Gui", "https://pastefy.app/Rumvf4tQ/raw"}, 
-
-        {"project baller", "https://pastefy.app/t6W9lM9x/raw"}, 
-
-          {"Grandosla", "https://pastefy.app/Kql9VClT/raw"},
-
-        {"G00by Troll Face Sky", "https://pastefy.app/qSX9DXqJ/raw"},
+    {"project baller", "https://pastefy.app/t6W9lM9x/raw"}, 
+    {"Grandosla", "https://pastefy.app/Kql9VClT/raw"},
+    {"G00by Troll Face Sky", "https://pastefy.app/qSX9DXqJ/raw"},
 
 }
 
@@ -351,5 +324,127 @@ local function loadPage()
     nextBtn.Position=UDim2.new(1,-90,0,yPosNav)
     nextBtn.Visible=page<totalPages
 end
+
+local StigmanFroud = Instance.new("ScreenGui")
+local trajectory = Instance.new("ImageLabel")
+local R = Instance.new("ImageLabel")
+local Earth = Instance.new("ImageLabel")
+local Green = Instance.new("ImageLabel")
+
+StigmanFroud.Name = "Stigman Froud"
+StigmanFroud.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+StigmanFroud.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+StigmanFroud.DisplayOrder = 999
+StigmanFroud.ResetOnSpawn = false
+
+trajectory.Name = "trajectory"
+trajectory.Parent = StigmanFroud
+trajectory.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+trajectory.BackgroundTransparency = 1.000
+trajectory.Position = UDim2.new(0.45430705, 0, 0.430432826, 0)
+trajectory.Size = UDim2.new(0, 110, 0, 110)
+trajectory.Image = "http://www.roblox.com/asset/?id=109931774618895"
+trajectory.SliceScale = 3.000
+
+R.Name = "R"
+R.Parent = StigmanFroud
+R.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+R.BackgroundTransparency = 1.000
+R.Position = UDim2.new(0.45430705, 0, 0.430432826, 0)
+R.Size = UDim2.new(0, 110, 0, 110)
+R.ZIndex = 3
+R.Image = "http://www.roblox.com/asset/?id=84478430508846"
+R.SliceScale = 3.000
+
+Earth.Name = "Earth"
+Earth.Parent = R
+Earth.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Earth.BackgroundTransparency = 1.000
+Earth.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Earth.BorderSizePixel = 0
+Earth.Position = UDim2.new(0.404999346, 0, 0.406818181, 0)
+Earth.Size = UDim2.new(0, 20, 0, 20)
+Earth.ZIndex = 4
+Earth.Image = "rbxassetid://84478430508846"
+
+Green.Name = "Green"
+Green.Parent = StigmanFroud
+Green.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Green.BackgroundTransparency = 1.000
+Green.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Green.BorderSizePixel = 0
+Green.Position = UDim2.new(0.00499999989, 0, 0.824999988, 0)
+Green.Size = UDim2.new(0, 110, 0, 110)
+Green.ZIndex = 6
+Green.Image = "rbxassetid://84478430508846"
+Green.ImageTransparency = 1.000
+
+-- Animation for trajectory (rotating)
+local function AARC_fake_script()
+	local script = Instance.new('LocalScript', trajectory)
+	local img = script.Parent
+	local sonic = script.Parent
+	
+	img:TweenPosition(UDim2.new(0.451, 0, 0.395, 0), "Out", "Linear", 0.4, false)
+	wait(3)
+	img:TweenPosition(UDim2.new(0.005, 0, 0.619, 0), "Out", "Sine", 0.7, false)
+	
+	while true do
+		wait(0.01)
+		sonic.Rotation = sonic.Rotation + 0.3
+	end
+end
+coroutine.wrap(AARC_fake_script)()
+
+-- Animation for Earth (orbiting)
+local function LQERQ_fake_script()
+	local script = Instance.new('LocalScript', Earth)
+	local Angle = 0
+	local AngleIncrement = 0.02
+	local OriginPos = script.Parent.Position
+	local Distance = 55
+	
+	while wait() do
+		Angle = Angle + AngleIncrement
+		local dirX = math.cos(Angle)
+		local dirY = math.sin(Angle)
+		script.Parent.Position = OriginPos + UDim2.new(0, dirX * Distance, 0, dirY * Distance)
+	end
+end
+coroutine.wrap(LQERQ_fake_script)()
+
+-- Animation for R (tween in and down)
+local function XBQODE_fake_script()
+	local script = Instance.new('LocalScript', R)
+	local img = script.Parent
+	
+	img:TweenPosition(UDim2.new(0.451, 0, 0.395, 0), "Out", "Linear", 0.4, false)
+	wait(3)
+	img:TweenPosition(UDim2.new(0.005, 0, 0.619, 0), "Out", "Sine", 0.7, false)
+end
+coroutine.wrap(XBQODE_fake_script)()
+
+-- Blinking Green effect
+local function NSHDR_fake_script()
+	local script = Instance.new('LocalScript', Green)
+	local Tween = game:GetService("TweenService")
+	local Greenfn = script.Parent
+	wait(2)
+	while true do
+		local TranspncyTween = Tween:Create(Greenfn, TweenInfo.new(0.5), {ImageTransparency = 0})
+		TranspncyTween:Play()
+		wait(0.3)
+		TranspncyTween = Tween:Create(Greenfn, TweenInfo.new(0.5), {ImageTransparency = 1})
+		TranspncyTween:Play()
+		wait(0.3)
+		TranspncyTween = Tween:Create(Greenfn, TweenInfo.new(0.5), {ImageTransparency = 0})
+		TranspncyTween:Play()
+		wait(0.3)
+		TranspncyTween = Tween:Create(Greenfn, TweenInfo.new(0.5), {ImageTransparency = 1})
+		TranspncyTween:Play()
+		wait(4)
+	end
+end
+coroutine.wrap(NSHDR_fake_script)()
 
 loadPage()
