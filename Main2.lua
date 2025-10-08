@@ -1,4 +1,4 @@
--- Project Tegma GUI
+-- Project http V.2 GUI
 
 local gui = Instance.new("ScreenGui")
 
