@@ -443,8 +443,8 @@ loadBtn.MouseButton1Click:Connect(function()
 
     local logoGui = Instance.new("ScreenGui")
 
-    logoGui.Name = "Tegma Logo"
-
+    logoGui.Name = "logo http"
+        
     logoGui.Parent = game.CoreGui
 
     local lel = Instance.new("ImageLabel")
