@@ -50,7 +50,7 @@ projectLabel.Size = UDim2.new(0, 250, 0, 50)
 
 projectLabel.BackgroundTransparency = 1
 
-projectLabel.Text = "Project Tegma"
+projectLabel.Text = "Project http v.2"
 
 projectLabel.TextColor3 = Color3.fromRGB(0, 105, 148)
 
@@ -84,7 +84,7 @@ img2.Size = UDim2.new(0, 400, 0, 150)
 
 img2.Position = UDim2.new(0.0, 0, 0.214, 0)
 
-img2.Image = "rbxassetid://77768875463612"
+img2.Image = "rbxassetid://127173546218065"
 
 img2.BackgroundTransparency = 1
 
