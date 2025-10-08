@@ -84,7 +84,7 @@ img2.Size = UDim2.new(0, 400, 0, 150)
 
 img2.Position = UDim2.new(0.0, 0, 0.214, 0)
 
-img2.Image = "rbxassetid://0"
+img2.Image = "rbxassetid://135065179429395"
 
 img2.BackgroundTransparency = 1
 
