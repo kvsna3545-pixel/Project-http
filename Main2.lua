@@ -313,7 +313,7 @@ creditsLabel.Size = UDim2.new(1, 0, 1, 0)
 
 creditsLabel.BackgroundTransparency = 1
 
-creditsLabel.Text = "Made By 1x1x1x1x1_HAX And Qx2wX"
+creditsLabel.Text = "Made By Team kvsna3545"
 
 creditsLabel.TextColor3 = Color3.fromRGB(0, 105, 148)
 
