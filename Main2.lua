@@ -66,7 +66,7 @@ img1.Size = UDim2.new(0, 30, 0, 30)
 
 img1.Position = UDim2.new(0, 5, 0, 8)
 
-img1.Image = "rbxassetid://77768875463612"
+img1.Image = "rbxassetid://127173546218065"
 
 img1.BackgroundTransparency = 1
 
