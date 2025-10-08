@@ -98,7 +98,7 @@ txtBox.Position = UDim2.new(0, 0, 0, 0)
 
 txtBox.PlaceholderText = ""
 
-txtBox.Text = "Script Here (Lua)"
+txtBox.Text = "Script Here"
 
 txtBox.TextColor3 = Color3.new(0, 105/255, 148/255)
 
