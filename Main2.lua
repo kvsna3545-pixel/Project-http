@@ -1,4 +1,4 @@
--- Project http V.2 GUI
+-- Project Tegma GUI
 
 local gui = Instance.new("ScreenGui")
 
@@ -50,7 +50,7 @@ projectLabel.Size = UDim2.new(0, 250, 0, 50)
 
 projectLabel.BackgroundTransparency = 1
 
-projectLabel.Text = "Project http V.2"
+projectLabel.Text = "Project Tegma"
 
 projectLabel.TextColor3 = Color3.fromRGB(0, 105, 148)
 
@@ -66,7 +66,7 @@ img1.Size = UDim2.new(0, 30, 0, 30)
 
 img1.Position = UDim2.new(0, 5, 0, 8)
 
-img1.Image = "rbxassetid://127173546218065"
+img1.Image = "rbxassetid://77768875463612"
 
 img1.BackgroundTransparency = 1
 
@@ -84,7 +84,7 @@ img2.Size = UDim2.new(0, 400, 0, 150)
 
 img2.Position = UDim2.new(0.0, 0, 0.214, 0)
 
-img2.Image = "rbxassetid://0"
+img2.Image = "rbxassetid://77768875463612"
 
 img2.BackgroundTransparency = 1
 
@@ -252,26 +252,8 @@ local scripts = {
 
         Code = "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/TEST19983/Reslasjd/refs/heads/main/attac\"))()"
 
-    },
-  
-    {
-        Name = "project http V.1"
+    }
 
-        Code = "loadstring(game:HttpGet("https://raw.githubusercontent.com/kvsna3545-pixel/Project-http/refs/heads/main/Main.lua"))()"
-    },
-  
-    {
-        Name = "Thank you Project"
-
-        Code = "loadstring(game:HttpGet("https://raw.githubusercontent.com/kvsna3545-pixel/Thank-you-project/refs/heads/main/Main.lua"))()"
-    },
-  
-    {
-        Name = "Project Duck Ultimate"
-
-        Code = "loadstring(game:HttpGet("https://pastefy.app/RX1PYZs1/raw"))()
-  }
-    
 }
 
 scroll.CanvasSize = UDim2.new(0, 0, 0, #scripts * 30)
@@ -331,7 +313,7 @@ creditsLabel.Size = UDim2.new(1, 0, 1, 0)
 
 creditsLabel.BackgroundTransparency = 1
 
-creditsLabel.Text = "Made By Team kvsna3545"
+creditsLabel.Text = "Made By 1x1x1x1x1_HAX And Qx2wX"
 
 creditsLabel.TextColor3 = Color3.fromRGB(0, 105, 148)
 
@@ -493,7 +475,7 @@ loadBtn.MouseButton1Click:Connect(function()
 
     Ring.ImageColor3 = Color3.new(0, 0, 0.5)
 
-    Ring.Image = "rbxassetid://127173546218065"
+    Ring.Image = "rbxassetid://7102118272"
 
     Ring.ImageTransparency = 0
 
