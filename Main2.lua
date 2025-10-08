@@ -271,6 +271,7 @@ local scripts = {
 
         Code = "loadstring(game:HttpGet("https://pastefy.app/RX1PYZs1/raw"))()
   }
+    
 }
 
 scroll.CanvasSize = UDim2.new(0, 0, 0, #scripts * 30)
