@@ -245,6 +245,8 @@ local scripts = {
         Code = "loadstring(game:HttpGet(\"https://pastefy.app/ur8n4dc6/raw\"))()"
 
     },
+
+    {
         Name = "Thank you Project.txt"
 
         Code = "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/kvsna3545-pixel/Thank-you-project/refs/heads/main/Main.lua\"))()"
