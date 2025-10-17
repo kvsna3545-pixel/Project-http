@@ -980,7 +980,7 @@ local function CLMAC_fake_script() -- TextButton_4.Script
 
 					local newimage = Instance.new("ImageLabel",newgui)
 
-					newimage.Image = "rbxassetid://78936338867658"
+					newimage.Image = "rbxassetid://136921654892695"
 
 					newimage.Size = UDim2.new(1,1,1,1)
 
