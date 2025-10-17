@@ -90,7 +90,7 @@ TextLabel.Size = UDim2.new(0, 164, 0, 56)
 
 TextLabel.Font = Enum.Font.SciFi
 
-TextLabel.Text = "🔊 Project http 🔊"
+TextLabel.Text = "Project http"
 
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 
@@ -314,7 +314,7 @@ TextButton_9.Size = UDim2.new(0, 308, 0, 40)
 
 TextButton_9.Font = Enum.Font.SciFi
 
-TextButton_9.Text = "TC0s REALM"
+TextButton_9.Text = "kvsna3545 EALM"
 
 TextButton_9.TextColor3 = Color3.fromRGB(255, 255, 255)
 
@@ -546,7 +546,7 @@ TextLabel_4.Size = UDim2.new(0, 207, 0, 28)
 
 TextLabel_4.Font = Enum.Font.SciFi
 
-TextLabel_4.Text = "ported by 🇹🇷Exploiterz🇹🇷  [team Exploiterz]"
+TextLabel_4.Text = "ported by 🇹🇭kvsna3545🇹🇭 [team kvsna3545]"
 
 TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 
@@ -572,7 +572,7 @@ TextButton_27.BorderColor3 = Color3.fromRGB(255, 0, 0)
 
 TextButton_27.Font = Enum.Font.SciFi
 
-TextButton_27.Text = "TC0s Theme"
+TextButton_27.Text = "kvsna3545 Theme"
 
 TextButton_27.TextColor3 = Color3.fromRGB(255, 255, 255)
 
@@ -624,7 +624,7 @@ TextButton_32.MouseButton1Click:Connect(function()
 
 	local msg = Instance.new("Message", workspace)
 
-	msg.Text = "Get Fuked MAFAKA!!!!"
+	msg.Text = "Get Fuked hahaha!!!!"
 
 	task.delay(3, function() msg:Destroy() end) -- Destruir después de 3 segundos
 
@@ -682,7 +682,7 @@ TextButton_33.MouseButton1Click:Connect(function()
 
 		gui.Parent = head
 
-		local text = "TC0"
+		local text = "kvsna3545"
 
 		local colors = {
 
@@ -1258,7 +1258,7 @@ local function createJumpscare()
 
 	top.BorderSizePixel = 0
 
-	top.Image = "rbxassetid://110795496892558"
+	top.Image = "rbxassetid://136921654892695"
 
 	top.ZIndex = 6
 
@@ -1502,17 +1502,17 @@ local function GZSF_fake_script() -- TextButton_13.Script
 
 		s.Parent = game.Lighting
 
-		s.SkyboxBk = "rbxassetid://76097968884423"
+		s.SkyboxBk = "rbxassetid://136921654892695"
 
-		s.SkyboxDn = "rbxassetid://76097968884423"
+		s.SkyboxDn = "rbxassetid://136921654892695"
 
-		s.SkyboxFt = "rbxassetid://76097968884423"
+		s.SkyboxFt = "rbxassetid://136921654892695"
 
-		s.SkyboxLf = "rbxassetid://76097968884423"
+		s.SkyboxLf = "rbxassetid://136921654892695"
 
-		s.SkyboxRt = "rbxassetid://76097968884423"
+		s.SkyboxRt = "rbxassetid://136921654892695"
 
-		s.SkyboxUp = "rbxassetid://76097968884423"
+		s.SkyboxUp = "rbxassetid://136921654892695"
 
 		game.Lighting.TimeOfDay = 12
 
@@ -1582,7 +1582,7 @@ local function FSRAUN_fake_script() -- TextButton_14.Script
 
 	for _, face in pairs({"Bk","Dn","Ft","Lf","Rt","Up"}) do
 
-		sky["Skybox"..face] = "rbxassetid://74805588821072"
+		sky["Skybox"..face] = "rbxassetid://136921654892695"
 
 	end
 
@@ -1604,7 +1604,7 @@ for _, part in pairs(workspace:GetDescendants()) do
 
 			local decal = Instance.new("Decal")
 
-			decal.Texture = "rbxassetid://74805588821072"
+			decal.Texture = "rbxassetid://136921654892695"
 
 			decal.Face = face
 
@@ -1620,7 +1620,7 @@ end
 
 	local p = Instance.new("ParticleEmitter")
 
-	p.Texture = "rbxassetid://74805588821072"
+	p.Texture = "rbxassetid://136921654892695"
 
 	p.Rate = 100
 
@@ -1662,8 +1662,8 @@ end
 
 	img.BorderSizePixel = 0
 
-	img.Image = "rbxassetid://99812737352540"
-
+	img.Image = "rbxassetid://136921654892695"
+			
 	img.ZIndex = 10
 
 	-- Sonido jumpscare clásico
